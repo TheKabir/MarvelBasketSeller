@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.marvelbasket.ui.home.Home"
+        android:label="Dashboard"
+        tools:layout="@layout/home_fragment" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.marvelbasket.Profile"
+        android:label="My Profile"
+        tools:layout="@layout/profile_fragment" />
+
+
+    <fragment
+        android:id="@+id/nav_addproduct"
+        android:name="com.example.marvelbasket.ui.Addproduct"
+        android:label="@string/AddProduct"
+        tools:layout="@layout/addproduct_fragment" />
+
+    <fragment
+        android:id="@+id/nav_editproduct"
+        android:name="com.example.marvelbasket.ui.editp.Editproduct"
+        android:label="View/Update Products"
+        tools:layout="@layout/editproduct_fragment" />
+    <fragment
+        android:id="@+id/nav_pendingorders"
+        android:name="com.example.marvelbasket.ui.orderManagement.Pendingorders"
+        android:label="Approve Orders"
+        tools:layout="@layout/pendingorders_fragment" />
+
+    <fragment
+        android:id="@+id/nav_fullfilledorders"
+        android:name="com.example.marvelbasket.ui.orderManagement.Fullfilledorders"
+        android:label="Finished Orders"
+        tools:layout="@layout/fullfilledorders_fragment" />
+    <fragment
+        android:id="@+id/nav_onwayorders"
+        android:name="com.example.marvelbasket.ui.orderManagement.Onwayorders"
+        android:label="Orders On-Way"
+        tools:layout="@layout/onwayorders_fragment" />
+    <fragment
+        android:id="@+id/nav_replacementorders"
+        android:name="com.example.marvelbasket.ui.orderManagement.Replaceorders"
+        android:label="Replacement"
+        tools:layout="@layout/replaceorders_fragment" />
+    <fragment
+        android:id="@+id/nav_payments"
+        android:name="com.example.marvelbasket.ui.payandreturn.Payments"
+        android:label="Check Payments"
+        tools:layout="@layout/payments_fragment" />
+
+    <fragment
+        android:id="@+id/nav_returns"
+        android:name="com.example.marvelbasket.ui.payandreturn.Returns"
+        android:label="Track Returns"
+        tools:layout="@layout/returns_fragment" />
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="com.example.marvelbasket.ui.payandreturn.Support"
+        android:label="Support Dashboard"
+        tools:layout="@layout/support_fragment" />
+
+    </navigation>

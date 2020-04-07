@@ -1,0 +1,4 @@
+1)"Request Product" button round radius
+2)"By Registering you agree to Marvel Basket's Terms and conditions" should be on the 
+page of "Bank Details" below the "Request Account" button  , not on the "Login Page"
+3)Image Restrict upto 5 in uploading product images

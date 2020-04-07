@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/bn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:ems="10"
+            android:gravity="center"
+            android:text="BUSINESS DETAILS"
+            android:textColor="@color/textmenu"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/shopname"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:hint="Shop Name"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/gstin"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:ems="10"
+            android:hint="GSTIN Number"
+            android:inputType="number"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="20sp" />
+
+        <!--<EditText
+            android:id="@+id/shopcontact"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:ems="10"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />-->
+
+
+        <EditText
+            android:id="@+id/shopaddress"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Business/Store's Primary Address"
+            android:inputType="textMultiLine"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/shoptype"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:background="@drawable/button_round"
+            android:ems="10"
+            android:gravity="center"
+            android:paddingLeft="5sp"
+            android:textAllCaps="false"
+            android:text="Select Category For Products"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/nextBank"
+            android:layout_width="match_parent"
+            android:layout_height="41sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="30sp"
+            android:background="@drawable/button_background"
+            android:scrollbarSize="4dp"
+            android:text="Next"
+            android:textColor="@color/textmenu"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    </LinearLayout>
+</ScrollView>

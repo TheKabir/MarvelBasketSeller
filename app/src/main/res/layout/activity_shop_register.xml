@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.DeviceDefault.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_dark"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/bn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="50sp"
+            android:background="@android:color/background_dark"
+            android:ems="10"
+            android:text="Business Details :"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:fontFamily="casual"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="320dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            android:background="@color/MBlogo_background"
+            android:ems="10"
+            android:hint="Business' Name"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/sid"
+            android:layout_width="320dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:background="@color/MBlogo_background"
+            android:ems="10"
+            android:hint="GSTIN Number (optional)"
+            android:inputType="number"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <EditText
+            android:id="@+id/btn"
+            android:layout_width="320dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:background="@color/MBlogo_background"
+            android:ems="10"
+            android:hint="Select Product Types"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/sno"
+            android:layout_width="320dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:background="@color/MBlogo_background"
+            android:ems="10"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <EditText
+            android:id="@+id/saddress"
+            android:layout_width="320dp"
+            android:layout_height="127dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:background="@color/MBlogo_background"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Business/Store's Primary Address"
+            android:inputType="textMultiLine"
+            android:paddingLeft="5sp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/hintcolor"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+</ScrollView>
