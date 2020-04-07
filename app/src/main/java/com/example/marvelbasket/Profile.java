@@ -29,7 +29,6 @@ public class Profile extends Fragment {
     private TextView textView;
     private ImageButton btn;
     private ProfileViewModel mViewModel;
-    public static final String MY_PREF_NAME = "marvelbasketseller";
 
     public static Profile newInstance() {
         return new Profile();
@@ -39,23 +38,12 @@ public class Profile extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable final ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        SharedPreferences preferences = this.getActivity().getSharedPreferences(MY_PREF_NAME, Context.MODE_PRIVATE);
-        String sellerJSON = preferences.getString("sellerJSON", "");
-        Gson gson = new Gson();
-        Seller seller = gson.fromJson(sellerJSON, Seller.class);
 
         View v = inflater.inflate(R.layout.profile_fragment, container, false);
         t = new EditText[]{v.findViewById(R.id.name), v.findViewById(R.id.mobile), v.findViewById(R.id.email), v.findViewById(R.id.shopAddress),
                 v.findViewById(R.id.shopName)};
 
-        t[0].setText(seller.getSellerName());
-        t[1].setText(seller.getSellerContact());
-        t[2].setText(seller.getSellerEmail());
-        t[3].setText(seller.getShopAddress());
-        t[4].setText(seller.getShopName());
-
         textView = v.findViewById(R.id.did);
-        textView.setText(seller.getShopName());
         final ImageButton button = v.findViewById(R.id.editacc);
         button.setBackgroundResource(R.drawable.edit_pencil);
         final int[] checkedit = {0};

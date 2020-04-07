@@ -78,41 +78,13 @@ public class Home extends Fragment {
         tvGeneral = v.findViewById(R.id.general);
         tvBook = v.findViewById(R.id.book);
 
-       /* SharedPreferences preferences = this.getActivity().getSharedPreferences(MY_PREF_NAME, Context.MODE_PRIVATE);
-        String sellerJSON = preferences.getString("sellerJSON", "");
-        String totalProductCountJSON = preferences.getString("totalProductCountJSON", "");
-        String approvedProductCountJSON = preferences.getString("approvedProductCountJSON", "");
-        String stoppedProductCountJSON = preferences.getString("stoppedProductCountJSON", "");
-        *//*String  requestedProductCountJSON = preferences.getString(" requestedProductCountJSON", "");*//*
 
-        Gson gson = new Gson();
-        Seller seller = gson.fromJson(sellerJSON, Seller.class);
-        ProductCount productCountForTotal = gson.fromJson(totalProductCountJSON, ProductCount.class);
-        ProductCount productCountForApproved = gson.fromJson(approvedProductCountJSON, ProductCount.class);
-        ProductCount productCountForStopped = gson.fromJson(stoppedProductCountJSON, ProductCount.class);
-        *//*ProductCount productCountForRequested = gson.fromJson(requestedProductCountJSON, ProductCount.class);*//*
-
-        Log.i("sellerJSON :",sellerJSON);
-        Log.i("totalPCJSON :",totalProductCountJSON);
-        Log.i("approvedPCJSON :",approvedProductCountJSON);
-        Log.i("stoppedPCJSON :",stoppedProductCountJSON);
-        *//*Log.i("requestedPCJSON :",requestedProductCountJSON);*//*
-
-
-        tvElectonics.setText(productCountForTotal.getElectronicTotalCount()+"");
-        tvBook.setText(productCountForTotal.getBookTotalCount()+"");
-        tvGeneral.setText(productCountForTotal.getGeneralTotalCount()+"");
-        tvFashion.setText(productCountForTotal.getFashionTotalCount()+"");
 
         //PIECHART DISPLAY
         pieChart = v.findViewById(R.id.pc);
         pieChart.setUsePercentValues(true);
 
         List<PieEntry> value = new ArrayList<>();
-        value.add(new PieEntry(productCountForTotal.getElectronicTotalCount(), "Electronics"));
-        value.add(new PieEntry(productCountForTotal.getBookTotalCount(), "Book"));
-        value.add(new PieEntry(productCountForTotal.getGeneralTotalCount(), "General"));
-        value.add(new PieEntry(productCountForTotal.getFashionTotalCount(), "Fashion"));
 
         PieDataSet pieDataSet = new PieDataSet(value,"");
         PieData pieData = new PieData(pieDataSet);
@@ -159,23 +131,6 @@ public class Home extends Fragment {
 
         ArrayList yVals1 = new ArrayList();
         ArrayList yVals2 = new ArrayList();
-        *//*ArrayList yVals3 = new ArrayList();*//*
-
-        yVals1.add(new BarEntry(1, productCountForApproved.getElectronicApprovedCount()));
-        yVals2.add(new BarEntry(1, productCountForStopped.getElectronicStoppedCount()));
-        *//*yVals3.add(new BarEntry(1, productCountForRequested.getElectronicRequestedCount()));*//*
-
-        yVals1.add(new BarEntry(2, productCountForApproved.getBookApprovedCount()));
-        yVals2.add(new BarEntry(2, productCountForStopped.getBookStoppedCount()));
-        *//*yVals3.add(new BarEntry(2, productCountForRequested.getBookRequestedCount()));*//*
-
-        yVals1.add(new BarEntry(3, productCountForApproved.getGeneralApprovedCount()));
-        yVals2.add(new BarEntry(3, productCountForStopped.getGeneralStoppedCount()));
-        *//*yVals3.add(new BarEntry(3, productCountForRequested.getGeneralRequestedCount()));*//*
-
-        yVals1.add(new BarEntry(4, productCountForApproved.getFashionApprovedCount()));
-        yVals2.add(new BarEntry(4, productCountForStopped.getFashionStoppedCount()));
-        *//*yVals3.add(new BarEntry(4, productCountForRequested.getFashionRequestedCount()));*//*
 
         BarDataSet set1, set2,set3;
 
@@ -188,11 +143,6 @@ public class Home extends Fragment {
         set2.setValueTextColor(Color.WHITE);
         set2.setValueTextSize(14f);
         set2.setColor(Color.RED);
-
-        *//*set3 = new BarDataSet(yVals3, "Requested");
-        set3.setValueTextColor(Color.WHITE);
-        set3.setValueTextSize(14f);
-        set3.setColor(Color.YELLOW);*//*
 
         BarData data = new BarData(set1, set2);
         data.setValueFormatter(new LargeValueFormatter());
@@ -238,7 +188,6 @@ public class Home extends Fragment {
         l.setYOffset(10f);
         l.setXOffset(0f);
         l.setYEntrySpace(0f);
-*/
         return v;
     }
 

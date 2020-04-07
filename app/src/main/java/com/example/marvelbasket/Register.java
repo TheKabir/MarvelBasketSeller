@@ -120,16 +120,7 @@ public class Register extends AppCompatActivity {
                     if (!regconfirmpssword.getText().toString().equals(regpassword.getText().toString())) {
                         regconfirmpssword.setError("It must match password !");
                     } else {
-                        //passing seller data
-                        Seller seller = new Seller();
-
-                        seller.setSellerName(regname.getText().toString());
-                        seller.setSellerEmail(regemail.getText().toString());
-                        seller.setSellerContact(regcontact.getText().toString());
-                        seller.setSellerPassword(regpassword.getText().toString());
-
                         Intent intent = new Intent(Register.this, ShopRegister.class);
-                        intent.putExtra("sellerPersonal", seller);
                         startActivity(intent);
                     }
                 }

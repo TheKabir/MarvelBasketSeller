@@ -57,7 +57,6 @@ import java.util.List;
 
 public class Afterlogin extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener{
 
-    public static final String MY_PREF_NAME = "marvelbasketseller";
     private AppBarConfiguration mAppBarConfiguration;
     private TextView tvName;
     private DrawerLayout drawer;
@@ -74,15 +73,8 @@ public class Afterlogin extends AppCompatActivity   implements NavigationView.On
          drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        //Displaying Entered Data After Login
-      // SharedPreferences preferences = getSharedPreferences(MY_PREF_NAME, Context.MODE_PRIVATE);
-       // String sellerJSON = preferences.getString("sellerJSON", "");
-        //Gson gson = new Gson();
-        //Seller seller = gson.fromJson(sellerJSON, Seller.class);
-
         //View v=navigationView.getHeaderView(0);
         //tvName =(TextView) v.findViewById(R.id.username);
-        //tvName.setText(seller.getSellerName());
 
 
         navigationView.setNavigationItemSelectedListener(this);
@@ -118,13 +110,6 @@ public class Afterlogin extends AppCompatActivity   implements NavigationView.On
     }
 
     public void logout(MenuItem m){
-        //removing data when log out
-        SharedPreferences.Editor editor = getSharedPreferences(MY_PREF_NAME,MODE_PRIVATE).edit();
-        editor.remove("sellerJSON");
-        editor.remove("stoppedProductCountJSON");
-        editor.remove("approvedProductCountJSON");
-        editor.remove("totalProductCountJSON");
-        editor.apply();
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
