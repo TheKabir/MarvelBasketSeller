@@ -9,11 +9,13 @@
     android:background="@color/MBlogo_background">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="13sp"
         android:paddingHorizontal="20dp"
         android:background="@color/MBlogo_background"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+    />
     <include layout="@layout/cardviewrow" android:visibility="gone"
         />
 

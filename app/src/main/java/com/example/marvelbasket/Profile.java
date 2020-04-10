@@ -69,7 +69,6 @@ public class Profile extends Fragment {
                     Toast.makeText(getContext(), "Changes Succesfully Saved", Toast.LENGTH_SHORT).show();
                     checkedit[0] = 0;
                 }
-
             }
         });
 

@@ -40,9 +40,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     // What will happen after we create the viewholder object
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, int position) {
-        holder.Name.setText("Mit G");
-        holder.desc.setText("9601594468");
-        holder.price.setText("100");
+        holder.Name.setText(" Asus ROG Strix Scar III");
+        holder.desc.setText("in Electronics");
+        holder.price.setText("120000");
 
     }
 
@@ -76,12 +76,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             fragmentTransaction.replace(R.id.frame, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-            /*AppCompatActivity activity = (AppCompatActivity) v.getContext();
-            Fragment showdata = new ShowData();
-            activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame, showdata).addToBackStack(null).commit();
-            Toast.makeText(context,"hii from class",Toast.LENGTH_SHORT).show();*/
-
-            //return activity.inflater.inflate(R.layout.editproduct_fragment, container, false);
         }
     }
 }

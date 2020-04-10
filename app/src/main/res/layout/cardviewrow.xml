@@ -4,16 +4,17 @@
     android:layout_width="match_parent"
     app:cardCornerRadius="15dp"
     android:elevation="10dp"
-    android:layout_marginTop="25sp"
+    android:layout_marginTop="12sp"
+    android:layout_marginBottom="13sp"
     android:layout_height="100dp"
     android:background="@color/MBlogo_background"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/cardeffect"
         android:orientation="horizontal">
-
 
         <LinearLayout
             android:layout_marginLeft="10sp"

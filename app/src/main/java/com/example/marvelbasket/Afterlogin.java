@@ -83,8 +83,8 @@ public class Afterlogin extends AppCompatActivity   implements NavigationView.On
         drawer.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        //Setting Home as default
 
+        //Setting Home as default
         setTitle("Dashboard");
         navigationView.setCheckedItem(R.id.nav_home);
         Fragment fragment = new Home();
@@ -119,7 +119,6 @@ public class Afterlogin extends AppCompatActivity   implements NavigationView.On
 
         Fragment fragment = null;
         switch (menuItem.getItemId()){
-
             case R.id.nav_home:
                 setTitle("Dashboard");
                 fragment = new Home();

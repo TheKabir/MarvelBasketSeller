@@ -54,7 +54,7 @@ public class Editproduct extends Fragment {
         contactArrayList = new ArrayList<>();
         EditData contact = new EditData(name.getText().toString(),desc.getText().toString(),price.getText().toString());
 
-        for(int i=0;i<15;i++)
+        for(int i=0;i<10;i++)
         {
             contactArrayList.add(contact);
         }

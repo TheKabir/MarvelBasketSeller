@@ -79,7 +79,6 @@ public class Addproduct extends Fragment implements AdapterView.OnItemSelectedLi
          attributes = new EditText[]{productBrandName, productName,productDescription,  productPrice,productStock, productColor, productWeight,
                  productSize, productLength,productWidth,productHeight,productSpecs};
 
-
         //Button Function To Select Image From Gallery
         Button ib = v.findViewById(R.id.selectimage);
         ib.setOnClickListener(new View.OnClickListener() {
