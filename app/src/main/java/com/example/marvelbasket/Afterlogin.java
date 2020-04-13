@@ -1,21 +1,12 @@
 package com.example.marvelbasket;
-import android.content.Context;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.marvelbasket.bean.ProductCount;
-import com.example.marvelbasket.bean.Seller;
-
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -31,14 +22,10 @@ import com.example.marvelbasket.ui.Addproduct;
 import com.example.marvelbasket.ui.editp.Editproduct;
 import com.example.marvelbasket.ui.home.Home;
 import com.example.marvelbasket.ui.orderManagement.Fullfilledorders;
-import com.example.marvelbasket.ui.orderManagement.Onwayorders;
 import com.example.marvelbasket.ui.orderManagement.Pendingorders;
-import com.example.marvelbasket.ui.orderManagement.Replaceorders;
 import com.example.marvelbasket.ui.payandreturn.Payments;
-import com.example.marvelbasket.ui.payandreturn.Returns;
 import com.example.marvelbasket.ui.payandreturn.Support;
 import com.google.android.material.navigation.NavigationView;
-import com.google.gson.Gson;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -47,13 +34,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Afterlogin extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -91,7 +71,6 @@ public class Afterlogin extends AppCompatActivity   implements NavigationView.On
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame,fragment);
         fragmentTransaction.commit();
-
 
     }
     @Override
@@ -132,29 +111,19 @@ public class Afterlogin extends AppCompatActivity   implements NavigationView.On
                 fragment = new Addproduct();
                 break;
             case R.id.nav_pendingorders:
-                setTitle("Approve Orders");
+                setTitle("Current Orders");
                 fragment = new Pendingorders();
                 break;
             case R.id.nav_fullfilledorders:
                 setTitle("Finished Orders");
                 fragment = new Fullfilledorders();
                 break;
-            case R.id.nav_replacementorders:
-                setTitle("Replacement");
-                fragment = new Replaceorders();
-                break;
-            case R.id.nav_onwayorders:
-                setTitle("Orders On-Way");
-                fragment = new Onwayorders();
-                break;
+
             case R.id.nav_payments:
                 setTitle("Check Payments");
                 fragment = new Payments();
                 break;
-            case R.id.nav_returns:
-                setTitle("Track Returns");
-                fragment = new Returns();
-                break;
+
             case R.id.nav_support:
                 setTitle("Support Dashboard");
                 fragment = new Support();
@@ -168,7 +137,6 @@ public class Afterlogin extends AppCompatActivity   implements NavigationView.On
 
 
         if (fragment != null){
-
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.frame,fragment);
             fragmentTransaction.commit();
@@ -178,4 +146,67 @@ public class Afterlogin extends AppCompatActivity   implements NavigationView.On
 
         return true;
     }
+
+    public void onBackPressed()
+    {
+        int count = getSupportFragmentManager().getBackStackEntryCount();
+        if (count == 0) {
+            AlertDialog.Builder builder
+                    = new AlertDialog
+                    .Builder(Afterlogin.this);
+            builder.setMessage("DO YOU WANT TO QUIT ?");
+            builder.setTitle("Alert !");
+            // Set Cancelable false
+            // for when the user clicks on the outside
+            // the Dialog Box then it will remain show
+            builder.setCancelable(false);
+
+            builder
+                    .setPositiveButton(
+                            "Yes",
+                            new DialogInterface
+                                    .OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+
+                                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                                    intent.addCategory(Intent.CATEGORY_HOME);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(intent);
+
+                                }
+                            });
+            builder
+                    .setNegativeButton(
+                            "No",
+                            new DialogInterface
+                                    .OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+
+                                    // If user click no
+                                    // then dialog box is canceled.
+                                    dialog.cancel();
+                                }
+                            });
+
+            // Create the Alert dialog
+            AlertDialog alertDialog = builder.create();
+
+            // Show the Alert Dialog box
+            alertDialog.show();
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.BLACK));
+
+        }
+        else {
+            super.onBackPressed();
+        }
+
+
+    }
+
 }

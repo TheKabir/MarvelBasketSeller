@@ -37,19 +37,11 @@
             <item
                 android:id="@+id/nav_pendingorders"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Pending Orders" />
+                android:title="Current Orders" />
             <item
                 android:id="@+id/nav_fullfilledorders"
                 android:icon="@drawable/ic_check_black_24dp"
                 android:title="Fullfilled Orders" />
-            <item
-                android:id="@+id/nav_replacementorders"
-                android:icon="@drawable/ic_find_replace_black_24dp"
-                android:title="Replacement Orders" />
-            <item
-                android:id="@+id/nav_onwayorders"
-                android:icon="@drawable/ic_arrow_upward_black_24dp"
-                android:title="Orders On-Way" />
             </group>
         </menu>
     </item>
@@ -60,10 +52,7 @@
             android:id="@+id/nav_payments"
             android:icon="@drawable/ic_payment_black_24dp"
             android:title="Check Payments" />
-        <item
-            android:id="@+id/nav_returns"
-            android:icon="@drawable/ic_assignment_returned_black_24dp"
-            android:title="Track Returns" />
+
         <item
             android:id="@+id/nav_support"
             android:icon="@drawable/ic_supervisor_account_black_24dp"

@@ -32,6 +32,7 @@ import com.example.marvelbasket.R;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import static android.app.Activity.RESULT_OK;
 
 public class Addproduct extends Fragment implements AdapterView.OnItemSelectedListener {
@@ -157,43 +158,55 @@ public class Addproduct extends Fragment implements AdapterView.OnItemSelectedLi
                     }}}
 
             //Extra constraints
-            if(!productStock.getText().toString().equals("")  & productStock.getVisibility()==View.VISIBLE ){
+                if(!productPrice.getText().toString().equals("")  &productPrice.getVisibility()==View.VISIBLE){
+                    if(Integer.parseInt(productPrice.getText().toString())<50){
+                        productPrice.setError("Must be atleast 50");
+                    productPrice.requestFocus();}
+                }
+       if(!productStock.getText().toString().equals("")  & productStock.getVisibility()==View.VISIBLE ){
                 if(Integer.parseInt(productStock.getText().toString())<10){
                 productStock.setError("Must be atleast 10");
+                productStock.requestFocus();
                 check=1;}
-            }
-            if(!productPrice.getText().toString().equals("")  &productPrice.getVisibility()==View.VISIBLE){
-                if(Integer.parseInt(productPrice.getText().toString())<50){
-                productPrice.setError("Must be atleast 50");}
             }
             if( !productWeight.getText().toString().equals("")  &productWeight.getVisibility()==View.VISIBLE ){
                 if(Integer.parseInt(productWeight.getText().toString())==0){
                     productWeight.setError("Invalid data !");
+                    productWeight.requestFocus();
                     check = 1;
             }
 
             }
-            if( !productLength.getText().toString().equals("")  &productLength.getVisibility()==View.VISIBLE){
+    if( !productLength.getText().toString().equals("")  &productLength.getVisibility()==View.VISIBLE){
                 if(Integer.parseInt(productLength.getText().toString())==0) {
                     productLength.setError("Invalid data !");
+                    productLength.requestFocus();
                     check = 1;}
                 }
-            if(!productWidth.getText().toString().equals("")  &productWidth.getVisibility()==View.VISIBLE ){
+        if(!productWidth.getText().toString().equals("")  &productWidth.getVisibility()==View.VISIBLE ){
                 if(Integer.parseInt(productWidth.getText().toString())==0) {
                     productWidth.setError("Invalid data !");
+                    productWidth.requestFocus();
                     check = 1;}
                 }
             if(!productHeight.getText().toString().equals("")  &productHeight.getVisibility()==View.VISIBLE ){
                 if(Integer.parseInt(productHeight.getText().toString())==0) {
                     productHeight.setError("Invalid data !");
+                    productHeight.requestFocus();
                     check = 1;}
                 }
             if(!productSize.getText().toString().equals("") & productSize.getVisibility()==View.VISIBLE) {
                 abc = checkSizeFashion(productSize.getText().toString(), productSize.getHint().toString());
+                if(abc==1){
+                    productSize.requestFocus();
+                }
             }
                   //final updating
             if(check==0 & abc==0){
 
+                for(EditText i : attributes){
+                    i.setText("");
+                }
                 Toast.makeText(getContext(),"Request Succesfully Submitted",Toast.LENGTH_LONG).show();;
             }
 

@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/nav_pendingorders"
         android:name="com.example.marvelbasket.ui.orderManagement.Pendingorders"
-        android:label="Approve Orders"
+        android:label="Current Orders"
         tools:layout="@layout/pendingorders_fragment" />
 
     <fragment
@@ -40,27 +40,13 @@
         android:name="com.example.marvelbasket.ui.orderManagement.Fullfilledorders"
         android:label="Finished Orders"
         tools:layout="@layout/fullfilledorders_fragment" />
-    <fragment
-        android:id="@+id/nav_onwayorders"
-        android:name="com.example.marvelbasket.ui.orderManagement.Onwayorders"
-        android:label="Orders On-Way"
-        tools:layout="@layout/onwayorders_fragment" />
-    <fragment
-        android:id="@+id/nav_replacementorders"
-        android:name="com.example.marvelbasket.ui.orderManagement.Replaceorders"
-        android:label="Replacement"
-        tools:layout="@layout/replaceorders_fragment" />
+
     <fragment
         android:id="@+id/nav_payments"
         android:name="com.example.marvelbasket.ui.payandreturn.Payments"
         android:label="Check Payments"
         tools:layout="@layout/payments_fragment" />
 
-    <fragment
-        android:id="@+id/nav_returns"
-        android:name="com.example.marvelbasket.ui.payandreturn.Returns"
-        android:label="Track Returns"
-        tools:layout="@layout/returns_fragment" />
     <fragment
         android:id="@+id/nav_support"
         android:name="com.example.marvelbasket.ui.payandreturn.Support"
