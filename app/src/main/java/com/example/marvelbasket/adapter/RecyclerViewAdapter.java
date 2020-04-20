@@ -40,9 +40,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     // What will happen after we create the viewholder object
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, int position) {
-        holder.Name.setText(" Asus ROG Strix Scar III");
-        holder.desc.setText("in Electronics");
-        holder.price.setText("120000");
+        EditData e = contactList.get(position);
+        holder.Name.setText(e.name);
+        holder.desc.setText(e.desc);
+        holder.price.setText(e.price);
 
     }
 
@@ -64,7 +65,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             Name = itemView.findViewById(R.id.displayName);
            desc = itemView.findViewById(R.id.shortdesc);
            price = itemView.findViewById(R.id.displayPrice);
-
         }
 
         @Override

@@ -39,9 +39,10 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull OrdersAdapter.ViewHolder holder, int position) {
-        holder.Name.setText(" Asus ROG Strix Scar III");
-        holder.desc.setText("Status : Finished");
-        holder.price.setText("120000");
+        EditData e = contactList.get(position);
+        holder.Name.setText(e.name);
+        holder.desc.setText(e.desc);
+        holder.price.setText(e.price);
 
     }
 

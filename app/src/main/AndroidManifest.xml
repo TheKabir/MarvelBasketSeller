@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.marvelbasket">
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/drawerlogo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/drawerlogo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".forgotpassword"></activity>
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".BankRegister" />
         <activity android:name=".ShopRegister" />
-        <activity android:name=".Register"
-            android:noHistory="true"/>
+        <activity
+            android:name=".Register"
+            android:noHistory="true" />
         <activity android:name=".ui.editp.Editproduct" />
         <activity
             android:name=".Afterlogin"
             android:label="@string/title_activity_afterlogin"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

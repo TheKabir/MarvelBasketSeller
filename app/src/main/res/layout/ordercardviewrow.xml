@@ -32,7 +32,7 @@
                 style="@style/profileDetailsTextMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Asus Rog Strix Scar |||" />
+                android:text="Apple Macbook Pro " />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,18 +40,47 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:layout_marginTop="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+                    style="@style/profileDetailsMiniText"
+                    android:layout_marginLeft="10dp"
+
+                    android:text="Order" />
+
+                <TextView
                     android:id="@+id/orderstatus"
+                    android:layout_marginTop="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+                    style="@style/profileDetailsMiniText"
+                    android:layout_marginLeft="5dp"
+                    android:text="approved" />
+                <TextView
+                    android:layout_marginTop="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+                    style="@style/profileDetailsMiniText"
+                    android:layout_marginLeft="5dp"
+
+                    android:text="on" />
+                <TextView
+                    android:id="@+id/orderDate"
                     android:layout_marginTop="10sp"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:textSize="17sp"
                     style="@style/profileDetailsMiniText"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
 
-                    android:text="In Electronics" />
+                    android:text="7/8/2019" />
                 <LinearLayout
                     android:layout_width="wrap_content"
+                    android:layout_marginTop="4sp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
@@ -73,7 +102,7 @@
                         android:layout_marginBottom="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1,20,000"
+                        android:text="1,85,000"
                         android:textSize="18sp" />
                     <TextView
                         style="@style/profileDetailsTextMain"

@@ -4,23 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/MBlogo_background"
     tools:context=".ui.orderManagement.Fullfilledorders">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingHorizontal="20dp"
+        android:background="@color/MBlogo_background"
+        android:id="@+id/finishedOrdersRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/MBlogo_background">
-
-        <TextView
-            android:layout_width="225dp"
-            android:layout_height="84dp"
-            android:text="Succesfully completed orders !"
-            android:textColor="@color/upload_pic_background"
-            android:textColorHint="@color/upload_pic_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        />
 
 </FrameLayout>

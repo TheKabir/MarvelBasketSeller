@@ -48,15 +48,11 @@ public class Pendingorders extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        TextView name= v.findViewById(R.id.orderdisplayName);
-        TextView desc= v.findViewById(R.id.orderstatus);
-        TextView price= v.findViewById(R.id.orderdisplayPrice);
-
-
 
 //adding data
         pendingOrdersArrayList = new ArrayList<>();
-        EditData contact = new EditData("abc","def","ghi");
+        EditData contact = new EditData("Apple Iphone 11 pro","approved","98000");
+        pendingOrdersArrayList.add(new EditData("Canon 1300D DSLR","approved","38000"));
 
         for(int i=0;i<10;i++)
         {

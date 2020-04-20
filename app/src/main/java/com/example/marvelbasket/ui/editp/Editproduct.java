@@ -44,17 +44,12 @@ public class Editproduct extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        TextView name= v.findViewById(R.id.displayName);
-         TextView desc= v.findViewById(R.id.shortdesc);
-         TextView price= v.findViewById(R.id.displayPrice);
-
-
-
 //adding data
         contactArrayList = new ArrayList<>();
-        EditData contact = new EditData(name.getText().toString(),desc.getText().toString(),price.getText().toString());
+        EditData contact = new EditData("Apple MacBook Pro 2019","in Electronics","185000");
+        contactArrayList.add(new EditData("Canon 1300D DSLR","in Electronics","38000"));
 
-        for(int i=0;i<10;i++)
+        for(int i=0;i<9;i++)
         {
             contactArrayList.add(contact);
         }

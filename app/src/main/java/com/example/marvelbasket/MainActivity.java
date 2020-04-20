@@ -113,18 +113,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void forgotpass() {
-        Intent intent = new Intent();
+    public void forgotpass(View view) {
+        Intent intent = new Intent(this,forgotpassword.class);
+        startActivity(intent);
     }
 
     public void registerhere(View view) {
         Intent intent = new Intent(this, Register.class);
         startActivity(intent);
     }
-
-
-
-
 
 
 }
